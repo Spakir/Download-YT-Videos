@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DownloadVideosYT:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DownloadVideosYT_jar</output-path>
+    <root id="archive" name="DownloadVideosYT.jar">
+      <element id="module-output" name="DownloadVideosYT" />
+    </root>
+  </artifact>
+</component>
