@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 public class Main {
     static volatile String path = "C:\\Новая папка\\video.mp4";
     static volatile String url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-
+    static final String ytDlpPath = System.getProperty("user.dir") + "\\src\\yt-dlp";
     public Main() {
     }
 
@@ -14,7 +14,7 @@ public class Main {
 
     public static void downloadVideo() {
         try {
-            ProcessBuilder pb = new ProcessBuilder("yt-dlp", url, "-o", path);
+            ProcessBuilder pb = new ProcessBuilder(ytDlpPath, url, "-o", path);
             pb.redirectErrorStream(true);
             Process process = pb.start();
             BufferedReader in = new BufferedReader(new InputStreamReader(process.getInputStream()));
